@@ -1,4 +1,4 @@
-# Scrapy settings for chocolatescraper project
+# Scrapy settings for quotescraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,19 +7,19 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "chocolatescraper"
+BOT_NAME = "quotescraper"
 
-SPIDER_MODULES = ["chocolatescraper.spiders"]
-NEWSPIDER_MODULE = "chocolatescraper.spiders"
+SPIDER_MODULES = ["quotescraper.spiders"]
+NEWSPIDER_MODULE = "quotescraper.spiders"
 
 ADDONS = {}
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "chocolatescraper (+http://www.yourdomain.com)"
+#USER_AGENT = "quotescraper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "chocolatescraper.middlewares.ChocolatescraperSpiderMiddleware": 543,
+#    "quotescraper.middlewares.QuotescraperSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "chocolatescraper.middlewares.ChocolatescraperDownloaderMiddleware": 543,
+#    "quotescraper.middlewares.QuotescraperDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "chocolatescraper.pipelines.ChocolatescraperPipeline": 300,
+#    "quotescraper.pipelines.QuotescraperPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -91,3 +91,11 @@ ROBOTSTXT_OBEY = False
 
 # Set settings whose default value is deprecated to a future-proof value
 FEED_EXPORT_ENCODING = "utf-8"
+
+# For Scrapy-Playwright
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
+
+TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
