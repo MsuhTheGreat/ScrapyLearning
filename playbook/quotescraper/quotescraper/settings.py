@@ -99,5 +99,5 @@ DOWNLOAD_HANDLERS = {
 }
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 # PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 30 * 1000
-PLAYWRIGHT_BROWSER_TYPE = "chromium"
-PLAYWRIGHT_LAUNCH_OPTIONS = {"headless": False}
+# PLAYWRIGHT_BROWSER_TYPE = "chromium"
+# PLAYWRIGHT_LAUNCH_OPTIONS = {"headless": False}

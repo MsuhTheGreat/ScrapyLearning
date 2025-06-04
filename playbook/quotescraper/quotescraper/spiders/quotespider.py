@@ -5,8 +5,8 @@ from scrapy_playwright.page import PageMethod
 
 class QuotespiderSpider(scrapy.Spider):
     name = "quotespider"
-    # allowed_domains = ["quotes.toscrape.com"]
-    # start_urls = ["https://quotes.toscrape.com/js/"]
+    allowed_domains = ["quotes.toscrape.com"]
+    start_urls = ["https://quotes.toscrape.com/js"]
 
     def start_requests(self):
         url = "https://quotes.toscrape.com/js/"
