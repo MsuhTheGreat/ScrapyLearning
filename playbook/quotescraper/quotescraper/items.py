@@ -6,7 +6,7 @@
 import scrapy
 
 
-class QuoteItem(scrapy.Item):
+class QuotescraperItem(scrapy.Item):
     # define the fields for your item here like:
     quote = scrapy.Field()
     author = scrapy.Field()
