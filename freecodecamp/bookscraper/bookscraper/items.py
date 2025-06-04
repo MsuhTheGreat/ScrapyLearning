@@ -24,6 +24,6 @@ class BookItem(scrapy.Item):
     tax               = scrapy.Field()
     availability      = scrapy.Field()
     number_of_reviews = scrapy.Field()
-    rating      = scrapy.Field()
+    rating            = scrapy.Field()
     url               = scrapy.Field()
     
